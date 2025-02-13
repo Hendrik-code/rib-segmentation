@@ -1,6 +1,6 @@
 # Automated Thoracolumbar Stump Rib Detection and Analysis in a Large CT Cohort
 
-![pipeline_process](rib-segmentation/figures/img_graphical_abstract.pdf?raw=true)
+![graphical_abstract](/figures/img_graphical_abstract.pdf)
 
 This is the official code belonging to the paper "Automated Thoracolumbar Stump Rib Detection and Analysis in a Large CT Cohort".
 
@@ -24,20 +24,20 @@ outputs = run_all_steps(rib_mask: NII, vertebra_mask: NII)
 
 ### 1 Instance Rib Assignment
 
-![seginstance](rib-segmentation/figures/img_seginstance-v2.pdf?raw=true)
+![seginstance](figures/img_seginstance-v2.pdf)
 
 Inputting a Rib semantic mask and a vertebra instance annotation, this will combine both masks and assign the connected components of the rib annotation to the vertebra instances, yielding a combined instance segmentation mask.
 
 ### 2 Rib Length Measurement
 
-![seglen](rib-segmentation/figures/img_riblen_algo.pdf?raw=true)
+![seglen](/rib-segmentation/figures/img_riblen_algo.pdf)
 
 This measurement algorithm takes the combined instance mask as input (and some parameters) and calculates points on the path of the rib segmentation to calculate its length.
 
 
 ### 3 Rib Features
 
-![segfeatures](rib-segmentation/figures/img_ribfeatures.pdf?raw=true)
+![segfeatures](rib-segmentation/figures/img_ribfeatures.pdf)
 
 A last step is to calculate the morphological features that were used in the paper to classify stump ribs even in partial views.
 This takes the combined instance mask as well as the output of the rib length measurement algorithm and returns calculated features.
