@@ -37,8 +37,10 @@ This measurement algorithm takes the combined instance mask as input (and some p
 
 ### 3 Rib Features
 
-![segfeatures](figures/img_ribfeatures.png)
-<img src="https://github.com/Hendrik-code/rib-segmentation/tree/main/figures/img_ribfeatures.png" width="250"/>
+<div align="center">
+<a href="https://github.com/Hendrik-code/rib-segmentation/blob/main/figures/img_ribfeatures.png"><img src="/figures/img_ribfeatures.png" width="512" ></a>
+</div>
+
 
 A last step is to calculate the morphological features that were used in the paper to classify stump ribs even in partial views.
 This takes the combined instance mask as well as the output of the rib length measurement algorithm and returns calculated features.
