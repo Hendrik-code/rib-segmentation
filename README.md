@@ -1,6 +1,8 @@
 # Automated Thoracolumbar Stump Rib Detection and Analysis in a Large CT Cohort
 
-![graphical_abstract](/figures/img_graphical_abstract.png)
+<div align="center">
+<a href="https://github.com/Hendrik-code/rib-segmentation/blob/main/figures/img_ribfeatures.png"><img src="/figures/img_graphical_abstract.png" width="512" ></a>
+</div>
 
 This is the official code belonging to the paper "Automated Thoracolumbar Stump Rib Detection and Analysis in a Large CT Cohort".
 
