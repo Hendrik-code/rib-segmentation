@@ -21,7 +21,13 @@ Here you can find the algorithms used in the paper. In order to not run all step
 from run import run_all_steps
 from TPTBox import NII
 
-outputs = run_all_steps(rib_mask: NII, vertebra_mask: NII)
+outputs = run_all_steps(
+    rib_mask: NII,                  # binary rib segmentation mask
+    vertebra_instance_mask: NII,    # vertebra instance segmentation mask
+    vertebra_semantic_mask: NII,    # vertebra semantic (subregion) mask
+    poi: POI | None = None,         # if available, a POI object. If missing, will calculate it
+    calc_orientation: bool = False, # if true, will calculate the orientation of the vertebrae
+)
 ```
 
 ### 1 Instance Rib Assignment
@@ -50,7 +56,7 @@ This takes the combined instance mask as well as the output of the rib length me
 
 ## Data
 
-The rib segmentation masks for the public VerSe and RibFrac datasets can be found here: https://zenodo.org/records/14850929
+The rib segmentation masks for the public VerSe and RibFrac datasets can be found here: https://doi.org/10.5281/zenodo.14850928
 
 The model weights for the rib segmentation model trained in the paper can also be downloaded from there and run with the nnUNet framework (https://github.com/MIC-DKFZ/nnUNet)
 
