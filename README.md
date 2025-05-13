@@ -8,7 +8,12 @@ This is the official code belonging to the paper "Automated Thoracolumbar Stump 
 
 If you use this code or the data provided below, please cite the following paper:
 ```
-TBD
+@article{moller2025automated,
+  title={Automated Thoracolumbar Stump Rib Detection and Analysis in a Large CT Cohort},
+  author={M{\"o}ller, Hendrik and Sch{\"o}n, Hanna and Dima, Alina and Keinert-Weth, Benjamin and Graf, Robert and Atad, Matan and Paetzold, Johannes and Jungmann, Friederike and Braren, Rickmer and Kofler, Florian and others},
+  journal={arXiv preprint arXiv:2505.05004},
+  year={2025}
+}
 ```
 
 
