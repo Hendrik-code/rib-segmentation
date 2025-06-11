@@ -1,8 +1,6 @@
 from TPTBox import NII, No_Logger, Log_Type, Location, Vertebra_Instance, POI, calc_poi_labeled_buffered
-import numpy as np
 from rib_length_measurement.calc_orientation import calc_orientation_from_poi
 from rib_length_measurement.rib_length_measurement_algorithm import rib_length_algorithm
-from utility.utils_points import fast_cdist, cdist_to_point, get_point_arr_mm
 
 logger = No_Logger(prefix="measure_rib_length")
 

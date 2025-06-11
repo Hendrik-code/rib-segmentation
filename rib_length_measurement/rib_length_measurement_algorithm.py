@@ -8,7 +8,7 @@ from utility.utils_length_measurement import (
     find_all_candidate_points,
     find_end_point,
 )
-from utility.utils_points import cdist, cdist_to_point, get_idx_point_closest_to_point, get_point_arr, get_point_arr_mm, get_raycasted_point
+from utility.utils_points import cdist, cdist_to_point, get_idx_point_closest_to_point, get_point_arr
 
 logger = No_Logger(prefix="RibLengthMeasurementAlgorithm")
 
@@ -18,8 +18,8 @@ vname2idx = Vertebra_Instance.name2idx()
 
 def rib_length_algorithm(
     sem_vr: NII,
-    stump_rib_threshold_in_mm: int = 38,
-    interpolation_distance_mm: int = 15,
+    stump_rib_threshold_in_mm: float = 38.0,
+    interpolation_distance_mm: float = 15.0,
     max_iterations: int = 150,
     do_dilateerode: bool = True,
     return_debug_data: bool = False,

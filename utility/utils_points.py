@@ -5,7 +5,7 @@ from TPTBox.core.vert_constants import COORDINATE
 from utility.utils_raycast import max_distance_ray_cast_convex
 
 
-def get_raycasted_point(rib_nii: NII, point_arr: np.ndarray, cur_point_idx: int, direction_vector: COORDINATE):
+def get_raycasted_point(rib_nii: NII, point_arr: np.ndarray, cur_point_idx: int, direction_vector: COORDINATE) -> int:
     end_point_coords = max_distance_ray_cast_convex(
         rib_nii,
         point_arr[cur_point_idx],
@@ -41,13 +41,13 @@ def fast_cdist(a, b):
     return cdist(a, b)
 
 
-def np_index(arr: np.ndarray, entry) -> int | None:
+def np_index(arr: np.ndarray, entry) -> np.ndarray:
     bool_arr = entry == arr
     idxs = np.flatnonzero((bool_arr).all(1))
     return idxs
 
 
-def get_idx_point_closest_to_point(point_arr: np.ndarray, point: COORDINATE):
+def get_idx_point_closest_to_point(point_arr: np.ndarray, point: COORDINATE) -> int:
     point = tuple(round(i) for i in point)
     idxs = np_index(point_arr, point)
     if len(idxs) == 0:

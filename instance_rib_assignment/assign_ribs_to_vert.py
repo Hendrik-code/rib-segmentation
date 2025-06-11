@@ -63,7 +63,7 @@ def assign_ribs_to_vert_segmentation(
     )
 
     if len(rib_seg.unique()) == 1:
-        rib_cc = rib_seg.get_segmentation_connected_components(labels=1, connectivity=3, transform_back_to_nii=True)[0][1]
+        rib_cc = rib_seg.get_connected_components(labels=1, connectivity=3)
         assert isinstance(rib_cc, NII)
     else:
         rib_cc = rib_seg.copy()
